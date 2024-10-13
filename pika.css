@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* to hide the screll bar after animation */
+    overflow: hidden;           
+}
+.bg{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(pika_bg.jpg);
+    background-size: 100vw 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pikachu{
+    height: 40vh;
+    width: 25vw;
+    background-image: url(pik.gif);
+    background-size: 15vw 10vw;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+}
+.enemy{
+    height: 40vh;
+    width: 15vw;
+    background-image: url(enemy1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 70vw;
+    top: 40vh;
+}
+
+.jumpPikachu{
+    animation: jump 0.6s linear;
+}
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 400px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.shootEnemy{
+    animation: shoot 5s linear infinite;
+}
+@keyframes shoot{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+.gameOver{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 15vw;
+    background-color: aliceblue;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    border-radius: 1.5rem;
+}
+.score{
+    height: 10vh;
+    width: 15vw;
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
